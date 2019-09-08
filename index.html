@@ -5,6 +5,7 @@
 </head>
 <body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
 <script>
+let gayest = 0
 async function genius(){
 setInterval(function(){
 let c1 = Math.floor(Math.random() * 10)
@@ -19,13 +20,19 @@ let d2 = document.getElementById('c3')
 let d3 = document.getElementById('c4')
 let d4 = document.getElementById('c5')
 let d5 = document.getElementById('c6')
+if(c1 === c4 && c2 === c5 && c3 === c6){
+let tt = document.getElementById('test')
+gayest += 1
+tt.innerHTML = "были равные числа дибил уже " + gayest + " раз!!!!!!!!!!!!!!!!!!!!!!!!!!"
+console.log(gayest)
+}
 d.innerHTML = c1
 d1.innerHTML = c2
 d2.innerHTML = c3
 d3.innerHTML = c4
 d4.innerHTML = c5
 d5.innerHTML = c6
-}, 10)
+}, 1)
 }
 window.onload = genius
 </script>
@@ -35,5 +42,7 @@ window.onload = genius
 <center><a href="https://vk.com/tailsjsundefined">
 <p>подпишись пока сюда</p>
 </a></center>
+
+<center><p id="test"></p></center>
 </body>
 </html>
