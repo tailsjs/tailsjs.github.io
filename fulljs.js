@@ -21,14 +21,14 @@ if(tt < 100){
 t.innerHTML = tt
 tt += 1
 }
-if(tt === 100){
+if(tt === 100 && t.innerHTML != "t"){
 t.innerHTML = "t"
 }
 if(aa < 200){
 a.innerHTML = aa
 aa += 1
 }
-if(aa === 200){
+if(aa === 200 && a.innerHTML != "a"){
 a.innerHTML = "a"
 }
 
@@ -36,35 +36,35 @@ if(ii < 300){
 i.innerHTML = ii
 ii += 1
 }
-if(ii === 300){
+if(ii === 300 && i.innerHTML != "i"){
 i.innerHTML = "i"
 }
 if(ll < 400){
 l.innerHTML = ll
 ll += 1
 }
-if(ll === 400){
+if(ll === 400 && l.innerHTML != "l"){
 l.innerHTML = "l"
 }
 if(ss < 500){
 z.innerHTML = ss
 ss += 1
 }
-if(ss === 500){
+if(ss === 500 && z.innerHTML != "s"){
 z.innerHTML = "s"
 }
 if(jj < 600){
 j.innerHTML = jj
 jj += 1
 }
-if(jj === 600){
+if(jj === 600 && j.innerHTML != "j"){
 j.innerHTML = "j"
 }
 if(sss < 700){
 ssss.innerHTML = sss
 sss += 1
 }
-if(sss === 700){
+if(sss === 700 && ssss.innerHTML != "s"){
 ssss.innerHTML = "s"
 }
 let c1 = Math.floor(Math.random() * 10)
