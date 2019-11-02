@@ -84,7 +84,7 @@ if(c1 === c4 && c2 === c5 && c3 === c6){
 let tt = document.getElementById('test')
 gayest += 1
 tt.innerHTML = "были равные числа дибил уже " + gayest + " раз!!!!!!!!!!!!!!!!!!!!!!!!!!"
-console.log(gayest)
+
 }
 d.innerHTML = c1
 d1.innerHTML = c2
