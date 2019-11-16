@@ -78,6 +78,14 @@ text-shadow: 1px 0 1px #000,
 .update{
 	font-family: 'Aqum';
 }
+.bord{
+	border: 4px solid black;
+	border-radius: 15px;
+	background: #fff;
+	padding: 5px;
+    width: 80%;
+	margin: 0 auto
+}
 @font-face {
     font-family: 'Boxed';
     src: local('Boxed Book'), local('Boxed-Book'),

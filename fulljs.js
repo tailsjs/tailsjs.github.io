@@ -1,11 +1,11 @@
-let gayest = 0
-let tt = 0
-let aa = 0
-let ii = 0
-let ll = 0 
-let ss = 0
-let jj = 0
-let sss = 0
+let gayest = 0,
+ tt = 0,
+ aa = 0,
+ ii = 0,
+ ll = 0,
+ ss = 0,
+ jj = 0,
+ sss = 0
 async function genius(){
 
 
@@ -67,19 +67,19 @@ sss += 1
 if(sss === 700 && ssss.innerHTML != "s"){
 ssss.innerHTML = "s"
 }
-let c1 = Math.floor(Math.random() * 10)
-let c2 = Math.floor(Math.random() * 10)
-let c3 = Math.floor(Math.random() * 10)
-let c4 = Math.floor(Math.random() * 10)
-let c5 = Math.floor(Math.random() * 10)
-let c6 = Math.floor(Math.random() * 10)
+let c1 = Math.floor(Math.random() * 10),
+ c2 = Math.floor(Math.random() * 10),
+ c3 = Math.floor(Math.random() * 10),
+ c4 = Math.floor(Math.random() * 10),
+ c5 = Math.floor(Math.random() * 10),
+ c6 = Math.floor(Math.random() * 10)
 
-let d = document.getElementById('c1')
-let d1 = document.getElementById('c2')
-let d2 = document.getElementById('c3')
-let d3 = document.getElementById('c4')
-let d4 = document.getElementById('c5')
-let d5 = document.getElementById('c6')
+let d = document.getElementById('c1'),
+ d1 = document.getElementById('c2'),
+ d2 = document.getElementById('c3'),
+ d3 = document.getElementById('c4'),
+ d4 = document.getElementById('c5'),
+ d5 = document.getElementById('c6')
 if(c1 === c4 && c2 === c5 && c3 === c6){
 let tt = document.getElementById('test')
 gayest += 1
