@@ -81,7 +81,7 @@ text-shadow: 1px 0 1px #000,
 .bord{
 	border: 4px solid black;
 	border-radius: 15px;
-	background: #fff;
+	background: #c0c0c0;
 	padding: 5px;
     width: 80%;
 	margin: 0 auto
