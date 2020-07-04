@@ -1,0 +1,77 @@
+<html>
+<head>
+<title> блог успешного кодера tailsjs</title>
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
+<meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
+<link rel="icon" href="tailsjs.github.io/favicon.ico" type="image/x-icon">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
+<script src ="fulljs.js"></script>
+
+<center><a class="old"><font id="c1" size="72"></font><font id="c2" size="72"></font><font id="c3" size="72"></font></a><a class="tailsjs"><font id="t" size="72" color="blue"></font><font id="a" size="72" color="blue"></font><font id="i" size="72" color="blue"></font><font id="l" size="72" color="blue"></font><font id="z" size="72" color="blue"></font><font id="j" size="72" color="blue"></font><font id="s1" size="72" color="blue"></font><font size="72" color="blue"> и его успешный блог</font></a><a class="old"><font id="c4" size="72"></font><font id="c5" size="72"></font><font id="c6" size="72"></font></a></center>
+<center><hr align="center" width="500" size="2" color="black" /></center>
+<div class="bord">
+<a class="old">
+<center><font size="96">ВАЖНЫЕ НОВОСТИ</font></center>
+<br>
+<center><canvas id="canvas" width="960" height="540"></canvas></center>
+<center><input type="file" id="inp" required accept=".jpg, .jpeg, .png"></center>
+<center>заголовок: <input id="up_text"></center>
+<center>описание: <input id="down_text"></center>
+<center><input value="создать" id="create" type="button"></center>
+</div>
+</a>
+<center><a href="index.html" class="back"><font size="46">назад</font></a></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><a class="obvodka" href="https://vk.com/tailsjsundefined"><font>група автора блога</font></a></center>
+
+<center><p id="test" class="floor"></p></center>
+
+<center><p id="test"></p></center>
+<script>
+let img;
+document.getElementById('inp').onchange = function(e) {
+	img = new Image();
+	//img.onload = draw;
+	img.onerror = failed;
+	img.src = URL.createObjectURL(this.files[0]);
+};
+function draw() {
+	if(!img)return alert('а где картинка')
+	var up_text = document.getElementById('up_text').value;
+	var down_text = document.getElementById('down_text').value;
+	if(!up_text)return alert('заголовок где')
+	if(!down_text)return alert('описание где')
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	var img2 = new Image();
+	img2.src = "images/breakingnews.png"
+	img2.onload = function(){
+		ctx.beginPath();
+	ctx.rect(0, 0, 1000, 1000);
+	ctx.fill();
+		ctx.drawImage(img, 0, 0, 960, 540);
+	ctx.drawImage(img2, 0, 0);
+	ctx.font = '60px AGT';
+			ctx.fillStyle = "#000000";
+			ctx.fillText(up_text, 30, 445);
+			ctx.font = '20px Arial';
+			ctx.fillStyle = "#000000";
+			ctx.fillText(down_text, 107, 500);
+  }
+}
+function failed() {
+	return alert('Это не картинка!')
+}
+document.getElementById('create').addEventListener('click', draw);
+</script>
+</body>
+</html>
