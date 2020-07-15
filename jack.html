@@ -1,32 +1,24 @@
 <html>
 <head>
 <title> блог успешного кодера tailsjs</title>
-<meta name="description" content="блог успешного кодера tailsjs пятая запись"> 
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
 <meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
 <link rel="icon" href="tailsjs.github.io/favicon.ico" type="image/x-icon">
 <link rel ="stylesheet" href="style.css">
 </head>
 <body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
 <script src ="fulljs.js"></script>
+
 <center><a class="old"><font id="c1" size="72"></font><font id="c2" size="72"></font><font id="c3" size="72"></font></a><a class="tailsjs"><font id="t" size="72" color="blue"></font><font id="a" size="72" color="blue"></font><font id="i" size="72" color="blue"></font><font id="l" size="72" color="blue"></font><font id="z" size="72" color="blue"></font><font id="j" size="72" color="blue"></font><font id="s1" size="72" color="blue"></font><font size="72" color="blue"> и его успешный блог</font></a><a class="old"><font id="c4" size="72"></font><font id="c5" size="72"></font><font id="c6" size="72"></font></a></center>
 <center><hr align="center" width="500" size="2" color="black" /></center>
 <div class="bord">
 <a class="old">
-<center><font size="96">весёлые вещи которые я накодил</font></center>
-<center><hr align="center" width="500" size="2" color="gray" /></center>
-<center><a href="getBrawler.html">коэфециент выпадения бравлера.</a></center>
-<center><a href="vipVK.html">ВИП ВКонтакте</a></center>
-<center><a href="demotivator.html">Демотиваторы</a></center>
-<center><a href="furnace.html">Печь</a></center>
-<center><a href="last.html">В последний раз спрашиваю...</a></center>
-<center><a href="shitCreator.html">Авторисунок</a></center>
-<center><a href="shakal.html">Шакал</a></center>
-<center><a href="breaknews.html">ВАЖНЫЕ НОВОСТИ</a></center>
-<center><a href="dontlieme.html">Не ври мне!</a></center>
-<center><a href="keygen95.html">Кейген от Windows 95 <font color="red">(ЭКСПЕРИМЕНТАЛЬНАЯ ШТУКА!)</font></a></center>
-<center><a href="film_bord.html">Табличка в фильме</a></center>
-<center><a href="nedopaint.html">недоpaint <font color="red">(ЭКСПЕРИМЕНТАЛЬНАЯ ШТУКА!)</font></a></center>
-<center><a href="jack.html">Жак Фреско</a></center>
+<center><font size="96">Жак Фреско</font></center>
+<br>
+<center><canvas id="canvas" width="1280" height="720"></canvas></center>
+<center>текст: <input id="text"></center>
+
+<center><input value="создать" id="create" type="button"></center>
 </div>
 </a>
 <center><a href="index.html" class="back"><font size="46">назад</font></a></center>
@@ -38,25 +30,45 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <center><a class="obvodka" href="https://vk.com/tailsjsundefined"><font>група автора блога</font></a></center>
 
 <center><p id="test" class="floor"></p></center>
 
 <center><p id="test"></p></center>
+<script>
+function draw() {
+	var text = document.getElementById('text').value;
+	if(!text)return alert('текст где')
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	var img2 = new Image();
+	var height = 380
+	img2.src = "images/jack.jpg"
+	img2.onload = function(){
+	ctx.drawImage(img2, 0, 0);
+	m=[];
+while(text.length>25){
+m.push(text.slice(0, 25) + "-");
+text=text.slice(25);};
+m.push(text);
+mC = m.length
+do{
+height -= 25
+mC -= 1
+}while(mC > 0)
+if(height < 0)height = 25
+	ctx.font = '48px TimesNewRoman';
+			ctx.fillStyle = "black";
+			ctx.textAlign = 'center';
+			ctx.textBaseline = "middle";
+			for (var i = 0; i<m.join('\n').split('\n').length; i++)
+    ctx.fillText('\"' + m.join('\n').split('\n')[i] + '\"', 430, height + (i*50) );
+  }
+}
+function failed() {
+	return alert('Это не картинка!')
+}
+document.getElementById('create').addEventListener('click', draw);
+</script>
 </body>
 </html>
