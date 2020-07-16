@@ -21,7 +21,8 @@
 <a class="old">
 <center><font size="96">недоpaint </font></center>
 <center><font color="red" size="72">ЭКСПЕРИМЕНТАЛЬНАЯ ШТУКА!</font></center>
-<center>Просто зажмите на холст.</center>
+<center>Просто зажмите на холсту и проведите линию.</center>
+<center>Координаты курсора: <p id="cursor">(X: 0, Y: 0)</p></center>
 <br>
 <center><canvas id="canvas" width="1000" height="1000" style="border:4px solid #000000;" class="mouses"></canvas></center><br>
 
@@ -48,7 +49,8 @@
 <center>Код цвета для текста: <input id="colorOfText" value="#000000" type="color"></center>
 <center><a id="download" download="tailsjs.ml_nedopaint.jpg" href="" onclick="download_img(this, 'jpg');">скачать творение (JPG)</a></center>
 <center><a id="download" download="tailsjs.ml_nedopaint.png" href="" onclick="download_img(this, 'png');">скачать творение (PNG)</a></center>
-<center>НедоPaint v1.2</center>
+
+<center>НедоPaint v1.3</center>
 </div>
 </a>
 <center><a href="index.html" class="back"><font size="46">назад</font></a></center>
@@ -141,9 +143,9 @@ setInterval(function(){
 	if(pressed === true){
 		if(radios[0].checked){
 		if(image === false){
-			ctx.fillRect(x, y, xB, yB);
+			ctx.fillRect(x-(xB/2), y-(yB/2), xB, yB);
 		}else{
-			ctx.drawImage(img, x, y, xR, yR)
+			ctx.drawImage(img, x-(xR/2), y-(yR/2), xR, yR)
 		}
 		}else{
 			ctx.font = document.getElementById('sizeOfText').value + "px Serif"
@@ -171,12 +173,13 @@ $(document).ready(function(){
 		 yR = document.getElementById('y').value
 		 xB = document.getElementById('xB').value
 		 yB = document.getElementById('yB').value
+		 document.getElementById('cursor').innerHTML = `(X: ${x}, Y: ${y})`
 		 if(document.getElementById('notClick').checked === true){
 			if(radios[0].checked){
 			if(image === false){
-			ctx.fillRect(x, y, xB, yB);
+			ctx.fillRect(x-(xB/2), y-(yB/2), xB, yB);
 		}else{
-			ctx.drawImage(img, x, y, xR, yR)
+			ctx.drawImage(img, x-(xR/2), y-(yR/2), xR, yR)
 		}
 	}else{
 			ctx.font = document.getElementById('sizeOfText').value + "px Serif"
