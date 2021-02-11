@@ -1,0 +1,73 @@
+<html>
+<head>
+<title> блог успешного кодера tailsjs</title>
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
+<meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
+<link rel="icon" href="tailsjs.github.io/favicon.ico" type="image/x-icon">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
+<script src ="fulljs.js"></script>
+
+<center><a class="old"><font id="c1" size="72"></font><font id="c2" size="72"></font><font id="c3" size="72"></font></a><a class="tailsjs"><font id="t" size="72" color="blue"></font><font id="a" size="72" color="blue"></font><font id="i" size="72" color="blue"></font><font id="l" size="72" color="blue"></font><font id="z" size="72" color="blue"></font><font id="j" size="72" color="blue"></font><font id="s1" size="72" color="blue"></font><font size="72" color="blue"> и его успешный блог</font></a><a class="old"><font id="c4" size="72"></font><font id="c5" size="72"></font><font id="c6" size="72"></font></a></center>
+<center><hr align="center" width="500" size="2" color="black" /></center>
+<div class="bord">
+<a class="old">
+<center><font size="96">Ответ убил...</font></center>
+<br>
+<center><canvas id="canvas" width="0" height="0"></canvas></center>
+<center><input type="file" id="inp" required accept=".jpg, .jpeg, .png"></center>
+</div>
+</a>
+<center><a href="index.html" class="back"><font size="46">назад</font></a></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<center><a class="obvodka" href="https://vk.com/tailsjsundefined"><font>група автора блога</font></a></center>
+
+<center><p id="test" class="floor"></p></center>
+
+<center><p id="test"></p></center>
+<script>
+var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		var img = new Image()
+		debug = true
+var image = document.getElementById('inp').files[0];
+var button = document.getElementById('create');
+function random(min, max) {return Math.round(Math.random() * (max - min)) + min}
+document.getElementById('inp').onchange = function(e) {
+	img = new Image();
+	img.onerror = failed;
+	img.src = URL.createObjectURL(this.files[0]);
+	img.onload = toDo
+	doGenerate = true
+};
+function toDo(id){
+	if(!img.src)return failed
+	let randomChoose = random(1,15)
+		let paint1 = [0, 640, 600, 640, 700, 660, 800, 800, 600, 660, 906, 721, 512, 320, 720, 512] // картинка килл по X
+		let paint2 = [0, 400, 460, 578, 532, 446, 420, 420, 530, 443, 1228, 606, 379, 320, 705, 291] // картинка килл по Y
+		let paint3 = [0, 640, 600, 640, 700, 660, 787, 785, 598, 659, 906, 710, 512, 320, 720, 512] // конец X
+		let paint4 = [0, 192, 182, 203, 171, 94, 225, 221, 222, 181, 402, 330, 179, 141, 334, 121] // конец Y
+		let paint5 = [0, 209, 279, 378, 363, 352, 180, 192, 308, 264, 860, 275, 197, 197, 371, 170] // куда ставить картинку
+		canvas.width = paint1[randomChoose]
+		canvas.height = paint2[randomChoose]
+		var img2 = new Image();
+		img2.src = `images/answer_kill/${randomChoose}.jpg`
+		img2.onload = function(){
+			ctx.drawImage(img2, 0, 0);
+			ctx.drawImage(img, 0, paint5[randomChoose], paint1[randomChoose], paint4[randomChoose]);
+		}
+	};
+function failed() {
+	return alert('либо ты заливаешь картинку, либо по ебалу');
+};
+</script>
+</body>
+</html>
