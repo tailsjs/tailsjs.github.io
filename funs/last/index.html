@@ -1,0 +1,46 @@
+<html>
+<head>
+<title> блог успешного кодера tailsjs</title>
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
+<meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
+<link rel="icon" href="https://tailsjs.github.io/favicon.ico" type="image/x-icon">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
+<a href="../index.html" class="back"><font size="12" style="font-family: 'Aqum'"><= back</font></a><p style="font-family: 'Hack';color: #fff !important;  font-size: 48px;transform: translate(-50%, -50%);position: absolute;text-align: center;left: 50%;top: -1%;">tailsjs</p>
+<center><font size="96" color="white" style="font-family: 'Aqum'">I ask for the last time...</font></center>
+<br>
+
+<canvas id="canvas" width="665" height="612" style="border: white;border-style: solid;-moz-box-sizing: border-box;box-sizing: border-box;transform: translate(-50%, -50%);position: absolute;left: 70%;top: 50%;"></canvas>
+<!-- <input value="Download as PNG!" download="tailsjs.ml_breaknews.jpg" href="" onclick="download_img(this, 'jpg');" type="button" style="transform: translate(-50%, -50%);position: absolute;left: 70%;top: 80%;">
+<input value="Download as JPG!" download="tailsjs.ml_breaknews.png" href="" onclick="download_img(this, 'png');" type="button" style="transform: translate(-50%, -50%);position: absolute;left: 70%;top: 85%;"> -->
+<div class="settings" style="font-family: 'Aqum'">
+	<center><font size="96">SETTINGS</font></center></br>
+<center><input type="file" id="inp" required accept=".jpg, .jpeg, .png"></center></br>
+</div>
+<script>
+let img;
+document.getElementById('inp').onchange = function(e) {
+	img = new Image();
+	img.onload = draw;
+	img.onerror = failed;
+	img.src = URL.createObjectURL(this.files[0]);
+};
+function draw() {
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	var img2 = new Image();
+	img2.src = "resources/last.jpg"
+	img2.onload = function(){
+	
+	ctx.drawImage(img2, 0, 0);
+	ctx.drawImage(img, 100, 60, 264, 52);
+  }
+}
+function failed() {
+	return alert('Это не картинка!')
+}
+</script>
+<canvas id='blank' style='display:none'></canvas>
+</body>
+</html>
