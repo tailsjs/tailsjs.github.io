@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> блог успешного кодера tailsjs</title>
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
+<meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
+<link rel="icon" href="https://tailsjs.github.io/favicon.ico" type="image/x-icon">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
+<a href="../index.html" class="back"><font size="12" style="font-family: 'Aqum'"><= back</font></a><p style="font-family: 'Hack';color: #fff !important;  font-size: 48px;transform: translate(-50%, -50%);position: absolute;text-align: center;left: 50%;top: -1%;">tailsjs</p>
+<center><font size="96" color="white" style="font-family: 'Aqum'">Brawler drop rate</font></center>
+<br>
+
+<div class="settings" style="font-family: 'Aqum'">
+	<center><font size="96">SETTINGS</font></center></br>
+	<center>Your final drop chance:</center>
+<center><font id="procent" size="12">0.0000000000000000%</font></center>
+<center>Rounded: <center><font id="floorprocent" size="12">0%</font></center>
+
+
+<center>chance of a drop of rarity (in percent): <input id="chance"></center>
+<center>number of attempts (chests): <input id="attempts"></center>
+
+ATTENTION!
+1 megabox - 10 brawl boxes.
+1 big box - 3 brawl boxes
+
+<center><input value="Count" id="count" type="button"></center>
+</div>
+<script>
+function count() {
+    var chance = Number(document.getElementById('chance').value.replace(/\,/g, "."));
+    var attempts = Number(document.getElementById('attempts').value);
+	if(!chance || isNaN(chance)) return;
+	if(!attempts || isNaN(attempts)) return;
+	
+	let finishChance = 100 * (1 - (Math.pow(1.0-chance/100, attempts)))
+	
+    document.getElementById('procent').innerHTML = finishChance+"%";
+	document.getElementById('floorprocent').innerHTML = Math.floor(finishChance)+"%";
+};
+ 
+document.getElementById('count').addEventListener('click', count);
+</script>
+<canvas id='blank' style='display:none'></canvas>
+</body>
+</html>
