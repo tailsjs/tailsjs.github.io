@@ -1,0 +1,58 @@
+<html>
+<head>
+<title> блог успешного кодера tailsjs</title>
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
+<meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
+<link rel="icon" href="https://tailsjs.github.io/favicon.ico" type="image/x-icon">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
+<a href="../index.html" class="back"><font size="12" style="font-family: 'Aqum'"><= back</font></a><p style="font-family: 'Hack';color: #fff !important;  font-size: 48px;transform: translate(-50%, -50%);position: absolute;text-align: center;left: 50%;top: -1%;">tailsjs</p>
+<center><font size="96" color="white" style="font-family: 'Aqum'">The answer killed...</font></center>
+<br>
+
+<canvas id="canvas" width="960" height="540" style="border: white;border-style: solid;-moz-box-sizing: border-box;box-sizing: border-box;transform: translate(-50%, -50%);position: absolute;left: 70%;top: 50%;"></canvas>
+<!-- <input value="Download as PNG!" download="tailsjs.ml_breaknews.jpg" href="" onclick="download_img(this, 'jpg');" type="button" style="transform: translate(-50%, -50%);position: absolute;left: 70%;top: 80%;">
+<input value="Download as JPG!" download="tailsjs.ml_breaknews.png" href="" onclick="download_img(this, 'png');" type="button" style="transform: translate(-50%, -50%);position: absolute;left: 70%;top: 85%;"> -->
+<div class="settings" style="font-family: 'Aqum'">
+	<center><font size="96">SETTINGS</font></center></br>
+<center><input type="file" id="inp" required accept=".jpg, .jpeg, .png"></center></br>
+</div>
+<script>
+var canvas = document.getElementById('canvas')
+		var ctx = canvas.getContext('2d')
+		var img = new Image()
+		debug = true
+var image = document.getElementById('inp').files[0];
+function random(min, max) {return Math.round(Math.random() * (max - min)) + min}
+document.getElementById('inp').onchange = function(e) {
+	img = new Image();
+	img.onerror = failed;
+	img.src = URL.createObjectURL(this.files[0]);
+	img.onload = toDo
+	doGenerate = true
+};
+function toDo(id){
+	if(!img.src)return failed
+	let randomChoose = random(1,15)
+		let paint1 = [0, 640, 600, 640, 700, 660, 800, 800, 600, 660, 906, 721, 512, 320, 720, 512] // картинка килл по X
+		let paint2 = [0, 400, 460, 578, 532, 446, 420, 420, 530, 443, 1228, 606, 379, 320, 705, 291] // картинка килл по Y
+		let paint3 = [0, 640, 600, 640, 700, 660, 787, 785, 598, 659, 906, 710, 512, 320, 720, 512] // конец X
+		let paint4 = [0, 192, 182, 203, 171, 94, 225, 221, 222, 181, 402, 330, 179, 141, 334, 121] // конец Y
+		let paint5 = [0, 209, 279, 378, 363, 352, 180, 192, 308, 264, 860, 275, 197, 197, 371, 170] // куда ставить картинку
+		canvas.width = paint1[randomChoose]
+		canvas.height = paint2[randomChoose]
+		var img2 = new Image();
+		img2.src = `resources/${randomChoose}.jpg`
+		img2.onload = function(){
+			ctx.drawImage(img2, 0, 0);
+			ctx.drawImage(img, 0, paint5[randomChoose], paint1[randomChoose], paint4[randomChoose]);
+		}
+	};
+function failed() {
+	return alert('либо ты заливаешь картинку, либо по ебалу');
+};
+</script>
+<canvas id='blank' style='display:none'></canvas>
+</body>
+</html>
