@@ -29,17 +29,17 @@
 <a href="word/index.html" title="Generating a Microsoft Word list with text." onmouseover="image(17);" onmouseleave="unimage();">Word</a></br>
 <a href="brawl_drop/index.html" title="Generating a drop from brawl stars." onmouseover="image(18);" onmouseleave="unimage();">Brawl Drop Generator</a></br>
 </div>
-<img id="images" height="360" width="640" src="./_images/filler.png">
+<img id="images" height="360" width="640" src="./images/filler.png">
 <div style="color: #fff !important;font-family: 'Aqum';" class="info">TO FIND OUT INFORMATION ABOUT A TOOL, ROUTE THE CURSOR TO ITS NAME AND <a style="color: #fff !important;text-decoration: none;" href="../easter_eggs/chillzone/index.html">CHILL</a></div>
 <script>
     function image(number){
-        images = [{src: "./_images/0.jpg", x: 600, y: 314},{src: "./_images/1.jpg", x: 640, y: 360}, {src: "./_images/2.png", x: 200, y: 448}, {src: "./_images/3.png", x: 760, y: 678}, {src: "./_images/4.png", x: 673, y: 280}, {src: "./_images/5.png", x: 632, y: 582}, {src: "./_images/6.png", x: 500, y: 500}, {src: "./_images/7.png", x: 640, y: 360}, {src: "./_images/8.png", x: 640, y: 360}, {src: "./_images/9.png", x: 640, y: 480}, {src: "./_images/10.gif", x: 500, y: 313}, {src: "./_images/11.png", x: 640, y: 360}, {src: "./_images/12.png", x: 500, y: 500}, {src: "./_images/13.png", x: 640, y: 360}, {src: "./_images/14.png", x: 500, y: 500}, {src: "./_images/15.png", x: 660, y: 446}, {src: "./_images/16.png", x: 238, y: 132}, {src: "./_images/17.png", x: 579, y: 344}, {src: "./_images/18.png", x: 960/1.5, y: 540/1.5}]
+        images = [{src: "./images/0.jpg", x: 600, y: 314},{src: "./images/1.jpg", x: 640, y: 360}, {src: "./images/2.png", x: 200, y: 448}, {src: "./images/3.png", x: 760, y: 678}, {src: "./images/4.png", x: 673, y: 280}, {src: "./images/5.png", x: 632, y: 582}, {src: "./images/6.png", x: 500, y: 500}, {src: "./images/7.png", x: 640, y: 360}, {src: "./images/8.png", x: 640, y: 360}, {src: "./images/9.png", x: 640, y: 480}, {src: "./images/10.gif", x: 500, y: 313}, {src: "./images/11.png", x: 640, y: 360}, {src: "./images/12.png", x: 500, y: 500}, {src: "./images/13.png", x: 640, y: 360}, {src: "./images/14.png", x: 500, y: 500}, {src: "./images/15.png", x: 660, y: 446}, {src: "./images/16.png", x: 238, y: 132}, {src: "./images/17.png", x: 579, y: 344}, {src: "./images/18.png", x: 960/1.5, y: 540/1.5}]
         document.getElementById("images").src = images[number].src
         document.getElementById("images").width = images[number].x
         document.getElementById("images").height = images[number].y
     }
     function unimage(){
-        document.getElementById("images").src = "./_images/filler.png"
+        document.getElementById("images").src = "./images/filler.png"
         document.getElementById("images").width = 0
         document.getElementById("images").height = 0
     }
