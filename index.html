@@ -27,11 +27,16 @@
 	</a> 
 </div>
   
-  <a class="update"><marquee hspace="300" id="esteg"><b>2.0</b> - RETHINKING UPDATE</marquee></a>
+  <a class="update"><marquee hspace="300" id="esteg"><b>2.1</b> - MOBILE UPDATE</marquee></a>
   	<!-- hitwebcounter Code START -->
 	<a href="old_index.html" target="_blank" class="views">
 	<img src="https://hitwebcounter.com/counter/counter.php?page=7685220&style=0010&nbdigits=5&type=page&initCount=0" border="0" /></a>  
 	<script>
+		var platform = navigator.userAgent;
+		console.log(platform)
+		if(platform.indexOf(/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i)){
+			window.location = "http://tailsjs.ml/mobile/"
+		}
 		window.addEventListener("keydown",function(e){if(e.keyCode===80){p=Number(prompt('INSERT_YOUR_PASS'));if(isNaN(p)||p!=atob('Mjc3MzUz'))return alert('WRONG_PASS');window.location="./h3nt.html"};if(e.keyCode===65){document.body.style.backgroundImage="url(./resources/ejected.gif)";document.body.style.backgroundRepeat="no-repeat";document.body.style.backgroundSize="100%";document.body.style.webkitBackgroundSize="100%"};if(e.keyCode===79){document.body.style.background="linear-gradient(45deg, #dbdada, #808080)"}});if(window.location.href.includes('?404')){document.getElementById('esteg').innerHTML=`<b>4.0.4</b> - RETHINKING UPDATE`};if(window.location.href.includes('?418')){document.getElementById('esteg').innerHTML=`<b>4.1.8</b> - IMATEAPOT UPDATE`}
 	</script>                              
 	<script src="canvas.js"></script>						
