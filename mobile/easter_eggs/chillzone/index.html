@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>chill zone.</title>
+    <style>
+        body { 
+				margin: 0px;
+				padding: 0px;
+				font-family: 'Segoe UI';
+				background-color: #000;
+				color: #bbbbbb;
+            }
+        
+            font{
+                transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+            }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+<audio src="https://allzic53.ice.infomaniak.ch/allzic53.mp3" autoplay></audio>
+
+    <font size="305" color="white" align="center">Chill Zone.</br> 
+        Just pour yourself some tea and sit back in your chair.</br>
+        <a href="../index.html" style="color: #fff !important;"><= BACK</a></font>
+        <script src="stars.js"></script>
+        <script>
+            var container = document.getElementById('container');
+		var starfield = new Starfield();
+		starfield.initialise(container);
+        
+			starfield.stars = Math.random()*1000 + 50;
+			starfield.minVelocity = Math.random()*30+5;
+			starfield.maxVelocity = Math.random()*50 + starfield.minVelocity;			
+			starfield.start();
+        
+
+        </script>
+</body>
+</html>

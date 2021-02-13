@@ -1,0 +1,120 @@
+body{
+	background: #000000;
+}
+.outline{
+font-size: 30;
+font-family: 'Boxed';
+text-shadow: 1px 0 1px #000, 
+0 1px 1px #000, 
+-1px 0 1px #000, 
+0 -1px 1px #000;
+}
+@font-face {
+  font-family: 'Boxed';
+  src: local('Boxed Book'), local('Boxed-Book'),
+      url('fonts/boxed/BoxedBook.woff2') format('woff2'),
+      url('fonts/boxed/BoxedBook.woff') format('woff'),
+      url('fonts/boxed/BoxedBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Hack';
+  src: local('Hack Bold'), local('Hack-Bold'),
+      url('fonts/hack/Hack-Bold.woff2') format('woff2'),
+      url('fonts/hack/Hack-Bold.woff') format('woff'),
+      url('fonts/hack/Hack-Bold.ttf') format('truetype');
+      font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arame';
+  src: local('Arame'), local('Arame'),
+      url('fonts/arame/Arame.woff2') format('woff2'),
+      url('fonts/arame/Arame.woff') format('woff'),
+      url('fonts/arame/Arame.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Aqum';
+  src: local('Aqum'), local('Aqum'),
+      url('fonts/aqum/Aqum.woff2') format('woff2'),
+      url('fonts/aqum/Aqum.woff') format('woff'),
+      url('fonts/aqum/Aqum.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+.old{
+  color: #000 !important;
+  font-family: 'Boxed';
+  text-decoration: none
+}
+.back{
+  color: #000 !important;
+  font-family: 'Boxed';
+}
+.name{
+   color: #fff !important;
+    font-family: 'Hack';
+    display: table;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    font-size: 72px;
+  /*  -webkit-text-stroke: 2.5px #000000;*/
+}
+.floor{
+	font-family: 'Arame';
+}
+.update{
+  color: #fff !important;
+  font-family: 'Aqum';
+  transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 95%;
+}
+.views{
+  position: absolute;
+  transform: translate(-50%, -50%);
+    left: 95%;
+    top: 95%;
+}
+
+.canv{
+  opacity: 0;
+  width:144px;
+  text-decoration: none
+}
+
+.canv:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+A{
+  text-decoration: none;
+}
+
+.url{
+  color: #fff !important;
+  font-family: 'Aqum';
+  transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 59%;
+    font-size: 72px;
+}
+.line{
+  transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 54%;
+    font-size: 32px;
+}
