@@ -1,0 +1,103 @@
+<html>
+<head>
+<title> блог успешного кодера tailsjs</title>
+<meta name="description" content="блог успешного кодера tailsjs коэфециент выпадения бравлера."> 
+<meta name="Keywords" content="tailsjs, блог, успешный блог, tailsjs js, js, javascript, блог tailsjs, tailsjs блог"> 
+<link rel="icon" href="https://tailsjs.github.io/favicon.ico" type="image/x-icon">
+<link rel ="stylesheet" href="style.css">
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, sans-serif; font-size: 75%">
+<a href="../index.html" class="back"><font size="12" style="font-family: 'Aqum'"><= back</font></a><p style="font-family: 'Hack';color: #fff !important;  font-size: 48px;transform: translate(-50%, -50%);position: absolute;text-align: center;left: 50%;top: -1%;">tailsjs</p>
+<center><font size="96" color="white" style="font-family: 'Aqum'">Craft</font></center>
+<br>
+
+<canvas id="canvas" width="238" height="132" style="border: white;border-style: solid;-moz-box-sizing: border-box;box-sizing: border-box;transform: translate(-50%, -50%);position: absolute;left: 50%;top: 25%;"></canvas>
+<!-- <input value="Download as PNG!" download="tailsjs.ml_breaknews.jpg" href="" onclick="download_img(this, 'jpg');" type="button" style="transform: translate(-50%, -50%);position: absolute;left: 70%;top: 80%;">
+<input value="Download as JPG!" download="tailsjs.ml_breaknews.png" href="" onclick="download_img(this, 'png');" type="button" style="transform: translate(-50%, -50%);position: absolute;left: 70%;top: 85%;"> -->
+<div class="settings" style="font-family: 'Aqum'">
+	<center><font size="96">SETTINGS</font></center></br>
+	<center>Slot 1: <input type="file" id="inp1" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 2: <input type="file" id="inp2" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 3: <input type="file" id="inp3" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 4: <input type="file" id="inp4" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 5: <input type="file" id="inp5" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 6: <input type="file" id="inp6" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 7: <input type="file" id="inp7" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 8: <input type="file" id="inp8" required accept=".jpg, .jpeg, .png"></center>
+<center>Slot 9: <input type="file" id="inp9" required accept=".jpg, .jpeg, .png"></center>
+<center>⬇</center>
+<center>Result: <input type="file" id="inp10" required accept=".jpg, .jpeg, .png"></center>
+	<center><input value="Create!" id="create" type="button"></center></br>
+</div>
+<script>
+var img;
+var img2;
+var img3;
+var img4;
+var img5;
+var img6;
+var img7;
+var img8;
+var img9;
+var img10;
+var button = document.getElementById('create')
+
+document.getElementById('inp1').onchange = function(e) {img = new Image(); img.onerror = failed; img.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp2').onchange = function(e) {img2 = new Image(); img2.onerror = failed; img2.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp3').onchange = function(e) {img3 = new Image(); img3.onerror = failed; img3.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp4').onchange = function(e) {img4 = new Image(); img4.onerror = failed; img4.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp5').onchange = function(e) {img5 = new Image(); img5.onerror = failed; img5.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp6').onchange = function(e) {img6 = new Image(); img6.onerror = failed; img6.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp7').onchange = function(e) {img7 = new Image(); img7.onerror = failed; img7.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp8').onchange = function(e) {img8 = new Image(); img8.onerror = failed; img8.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp9').onchange = function(e) {img9 = new Image(); img9.onerror = failed; img9.src = URL.createObjectURL(this.files[0]);}
+document.getElementById('inp10').onchange = function(e) {img10 = new Image(); img10.onerror = failed; img10.src = URL.createObjectURL(this.files[0]);}
+
+function toDo(){
+	var canvas = document.getElementById('canvas');
+	var ctx = canvas.getContext('2d');
+	var img11 = new Image();
+	img11.src = "resources/craft.png";
+	img11.onload = function(){
+		if(!img10)return alert('how about result?')
+	ctx.drawImage(img11, 0, 0);
+	if(img){
+	ctx.drawImage(img, 6, 23, 32, 32);
+	};
+	if(img2){
+	ctx.drawImage(img2, 42, 23, 32, 32);
+	};
+	if(img3){
+	ctx.drawImage(img3, 78, 23, 32, 32);
+	};
+	if(img4){
+	ctx.drawImage(img4, 6, 60, 32, 32);
+	};
+	if(img5){
+	ctx.drawImage(img5, 42, 60, 32, 32);
+	};
+	if(img6){
+	ctx.drawImage(img6, 78, 60, 32, 32);
+	};
+	if(img7){
+	ctx.drawImage(img7, 6, 96, 32, 32);
+	};
+	if(img8){
+	ctx.drawImage(img8, 42, 96, 32, 32);
+	};
+	if(img9){
+	ctx.drawImage(img9, 78, 96, 32, 32);
+	};
+	
+	ctx.drawImage(img10, 186, 52, 48, 48);
+	};
+
+}
+function failed() {
+	return alert('ты либо заполняешь хотя бы одно поле картинкой, либо я тебе по ебалу.')
+}
+document.getElementById('create').addEventListener('click', toDo);
+</script>
+<canvas id='blank' style='display:none'></canvas>
+</body>
+</html>
